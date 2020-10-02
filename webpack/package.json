@@ -1,0 +1,20 @@
+{
+    "name": "novorender-examples-webpack",
+    "version": "1.0.0",
+    "description": "",
+    "browser": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --open"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "copy-webpack-plugin": "^6.1.1",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {
+        "@novotech/novorender": ">=0.0.0"
+    }
+}

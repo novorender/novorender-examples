@@ -1,0 +1,16 @@
+{
+    "name": "novorender-examples-esm",
+    "version": "1.0.0",
+    "description": "Basic example on how to use NovoRender as an ES module.",
+    "browser": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node build.js & http-server -o"
+    },
+    "dependencies": {
+        "@novotech/novorender": ">=0.0.0"
+    },
+    "devDependencies": {
+        "http-server": "^0.12.3"
+    }
+}

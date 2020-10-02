@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NovoRender Examples</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+    <link rel="icon" href="data:,">
+    <script type="module">
+        import * as NovoRender from "https://api.novorender.com/scripts/v0.0.1/index.js";
+        main(document.getElementById("output"));
+        async function main(canvas) {
+            const api = NovoRender.createAPI();
+            const view = api.createView(canvas, { background: { color: [0, 0, 0.25, 1] } });
+            view.scene = await api.loadScene(NovoRender.WellKnownSceneIds.cube);
+            view.camera.controller = api.createCameraController({ kind: "turntable" });
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="output" style="width:100%; height:100%"></canvas>
+</body>
+
+</html>
