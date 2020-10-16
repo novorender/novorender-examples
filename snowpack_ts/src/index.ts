@@ -1,4 +1,5 @@
 import * as NovoRender from "@novotech/novorender";
+import "gl-matrix";
 
 main(document.getElementById("output") as HTMLCanvasElement);
 
@@ -9,8 +10,3 @@ async function main(canvas: HTMLCanvasElement) {
     view.scene = scene;
     view.camera.controller = api.createCameraController({ kind: "turntable" });
 }
-
-// confetti.create(document.getElementById('canvas') as HTMLCanvasElement, {
-//     resize: true,
-//     useWorker: true,
-// })({ particleCount: 200, spread: 200 });

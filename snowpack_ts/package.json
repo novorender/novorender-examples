@@ -3,10 +3,10 @@
         "start": "snowpack dev"
     },
     "dependencies": {
-        "@novotech/novorender": "0.0.1"
+        "@novotech/novorender": "0.0.2",
+        "gl-matrix": "^3.3.0"
     },
     "devDependencies": {
-        "@snowpack/plugin-run-script": "^2.1.4",
         "snowpack": "^2.13.2",
         "typescript": "^4.0.0"
     }
