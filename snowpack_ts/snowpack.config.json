@@ -1,7 +1,0 @@
-{
-    "mount": {
-        "public": "/",
-        "src": "/_dist_",
-        "node_modules/@novotech/novorender/": "/web_modules/@novotech/"
-    }
-}

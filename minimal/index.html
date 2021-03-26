@@ -12,12 +12,12 @@
     </style>
     <link rel="icon" href="data:,">
     <script type="module">
-        import * as NovoRender from "https://api.novorender.com/scripts/v0.0.1/index.js";
+        import * as NovoRender from "https://api.novorender.com/scripts/v0.2.0/index.js";
         main(document.getElementById("output"));
         async function main(canvas) {
             const api = NovoRender.createAPI();
-            const view = api.createView(canvas, { background: { color: [0, 0, 0.25, 1] } });
-            view.scene = await api.loadScene(NovoRender.WellKnownSceneIds.cube);
+            const view = await api.createView(canvas, { background: { color: [0, 0, 0.25, 1] } });
+            view.scene = await api.loadScene(NovoRender.WellKnownSceneUrls.cube);
             view.camera.controller = api.createCameraController({ kind: "turntable" });
         }
     </script>

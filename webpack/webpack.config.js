@@ -19,7 +19,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 "index.html",
-                { from: "node_modules/@novotech/novorender/*.js", to: "novorender", flatten: true }
+                { from: "node_modules/@novotech/novorender/*.js", to: "novorender/[name][ext]" }
             ],
         }),
     ],
