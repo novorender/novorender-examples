@@ -1,11 +1,36 @@
-import * as NovoRender from "@novotech/novorender";
+import * as NovoRender from "@novorender/webgl-api";
 
 async function main(canvas) {
+    // Create API
     const api = NovoRender.createAPI();
-    console.log(api.version);
-    const view = await api.createView(canvas, { background: { color: [0, 0, 0.25, 1] } });
-    const scene = await api.loadScene(NovoRender.WellKnownSceneUrls.cube);
-    view.scene = scene;
-    view.camera.controller = api.createCameraController({ kind: "turntable" });
+
+    // Create a view
+    const view = await api.createView({ background: { color: [0, 0, 0.25, 1] } }, canvas);
+
+    // load a predfined scene into the view, available views are cube, oilrig, condos
+    view.scene = await api.loadScene(NovoRender.WellKnownSceneUrls.condos);
+
+    // provide a controller, available controller types are static, orbit, flight and turntable
+    view.camera.controller = api.createCameraController({ kind: "turntable" }, canvas);
+
+    const ctx = canvas.getContext("bitmaprenderer");
+    for (; ;) {
+
+        const { clientWidth: width, clientHeight: height } = canvas;
+        // handle resizes
+        view.applySettings({ display: { width, height } });
+        const output = await view.render();
+
+        {
+            const image = await output.getImage();
+            if (image) {
+                // display in canvas
+                ctx.transferFromImageBitmap(image);
+            }
+        }
+        output.dispose();
+        
+    }
 }
-main(document.getElementById("output_canvas"));
+
+main(document.getElementById("output"));

@@ -3,6 +3,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js',
     output: {
         filename: "main.js",
@@ -10,16 +11,22 @@ module.exports = {
     },
     // externalsType: "script",
     externals: {
-        "@novotech/novorender": "self.NovoRender",
+        "@novorender/webgl-api": "self.NovoRender",
     },
     devServer: {
-        contentBase: './dist',
+        static: './dist',
+        watchFiles: {
+            paths: ['src/**/*'],
+            options: {
+                usePolling: false,
+            }
+        }
     },
     plugins: [
         new CopyPlugin({
             patterns: [
                 "index.html",
-                { from: "node_modules/@novotech/novorender/*.js", to: "novorender/[name][ext]" }
+                { from: "node_modules/@novorender/webgl-api/*.js", to: "novorender/[name][ext]" }
             ],
         }),
     ],

@@ -10,12 +10,12 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "copy-webpack-plugin": "^8.1.0",
-        "webpack": "^5.28.0",
-        "webpack-cli": "^4.5.0",
-        "webpack-dev-server": "^3.11.2"
+        "copy-webpack-plugin": "^10.2.4",
+        "webpack": "^5.72.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.8.1"
     },
     "dependencies": {
-        "@novotech/novorender": "0.2.0"
+        "@novorender/webgl-api": "0.3.43"
     }
 }

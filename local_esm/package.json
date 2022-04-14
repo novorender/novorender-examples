@@ -5,12 +5,12 @@
     "browser": "index.js",
     "type": "module",
     "scripts": {
-        "start": "node build.js & http-server -o"
+        "start": "node build.js & http-server -o -c-1"
     },
     "dependencies": {
-        "@novotech/novorender": "^0.2.0"
+        "@novorender/webgl-api": "^0.3.43"
     },
     "devDependencies": {
-        "http-server": "^0.12.3"
+        "http-server": "^14.1.0"
     }
 }
