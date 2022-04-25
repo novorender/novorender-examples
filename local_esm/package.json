@@ -8,7 +8,7 @@
         "start": "node build.js & http-server -o -c-1"
     },
     "dependencies": {
-        "@novorender/webgl-api": "^0.3.43"
+        "@novorender/webgl-api": "^0.3.58"
     },
     "devDependencies": {
         "http-server": "^14.1.0"

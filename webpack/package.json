@@ -16,6 +16,6 @@
         "webpack-dev-server": "^4.8.1"
     },
     "dependencies": {
-        "@novorender/webgl-api": "0.3.43"
+        "@novorender/webgl-api": "^0.3.58"
     }
 }
