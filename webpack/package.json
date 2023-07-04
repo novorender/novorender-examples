@@ -5,17 +5,18 @@
     "browser": "index.js",
     "scripts": {
         "start": "webpack serve --open",
-        "build": "webpack -d"
+        "build": "webpack -d",
+        "update-deps-to-latest": "npx npm-check-updates -u && npm install"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "copy-webpack-plugin": "^10.2.4",
-        "webpack": "^5.72.0",
-        "webpack-cli": "^4.9.2",
-        "webpack-dev-server": "^4.8.1"
+        "copy-webpack-plugin": "^11.0.0",
+        "webpack": "^5.88.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
     },
     "dependencies": {
-        "@novorender/webgl-api": "^0.3.58"
+        "@novorender/webgl-api": "^0.4.59"
     }
 }

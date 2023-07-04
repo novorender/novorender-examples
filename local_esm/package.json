@@ -5,12 +5,13 @@
     "browser": "index.js",
     "type": "module",
     "scripts": {
-        "start": "node build.js & http-server -o -c-1"
+        "start": "node build.js & http-server -o -c-1",
+        "update-deps-to-latest": "npx npm-check-updates -u && npm install"
     },
     "dependencies": {
-        "@novorender/webgl-api": "^0.3.58"
+        "@novorender/webgl-api": "^0.4.59"
     },
     "devDependencies": {
-        "http-server": "^14.1.0"
+        "http-server": "^14.1.1"
     }
 }
