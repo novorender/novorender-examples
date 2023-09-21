@@ -1,4 +1,6 @@
 import { View, getDeviceProfile, createSphereObject } from "@novorender/api";
+// @ts-expect-error
+import { shaders } from "@novorender/api/public/shaders";
 
 // get canvas reference
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
@@ -9,7 +11,8 @@ async function main(canvas: HTMLCanvasElement) {
     const gpuTier = 2; // laptop with reasonably new/powerful GPU.
     // Get Device Profile
     const deviceProfile = getDeviceProfile(gpuTier);
-    const imports = await View.downloadImports({ baseUrl: "/novorender/api/" }); // or whereever you copied the public/ files from the package.
+    const baseUrl = new URL("/novorender/api/", location.origin);
+    const imports = await View.downloadImports({ baseUrl, shaders });
     // Create a View
     const view = new View(canvas, deviceProfile, imports);
     // load a predefined environment to set it as background
