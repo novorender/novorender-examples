@@ -25,3 +25,7 @@ A tutorial can be found for this project [here](https://docs.novorender.com/docs
     ```bash
     npm run dev
     ```
+
+**--- OR ---**
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/novorender/novorender-examples/tree/master/webpack-vanilla-ts)
