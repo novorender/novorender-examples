@@ -23,3 +23,5 @@
     ```bash
     npm start
     ```
+
+5. Application will start running at <http://localhost:3000>
