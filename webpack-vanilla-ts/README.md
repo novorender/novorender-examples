@@ -28,4 +28,4 @@ A tutorial can be found for this project [here](https://docs.novorender.com/docs
 
 **--- OR ---**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/novorender/novorender-examples/tree/master/webpack-vanilla-ts)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/novorender/novorender-examples/tree/master/webpack-vanilla-ts?file=src/main.ts)

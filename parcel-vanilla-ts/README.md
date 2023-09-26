@@ -23,7 +23,3 @@
     ```bash
     npm start
     ```
-
-**--- OR ---**
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/novorender/novorender-examples/tree/master/parcel-vanilla-ts)
