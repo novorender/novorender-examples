@@ -1,7 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { View, getDeviceProfile, createSphereObject } from "@novorender/api";
-// @ts-expect-error
-import { shaders } from "@novorender/api/public/shaders";
 
 // Create a simple sphere mesh object.
 const { mesh } = createSphereObject();
@@ -25,11 +23,11 @@ export class AppComponent {
     // Get Device Profile
     const deviceProfile = getDeviceProfile(gpuTier);
     const baseUrl = new URL("/assets/novorender/api/", location.origin);
-    const imports = await View.downloadImports({ baseUrl, shaders }); // or whereever you copied the public/ files from the package.
+    const imports = await View.downloadImports({ baseUrl }); // or whereever you copied the public/ files from the package.
     // Create a View
     const view = new View(canvas, deviceProfile, imports);
     // load a predefined environment to set it as background
-    const envIndexUrl = "https://api.novorender.com/assets/env/index.json";
+    const envIndexUrl = new URL("https://api.novorender.com/assets/env/index.json");
     const envs = await view.availableEnvironments(envIndexUrl);
     const { url } = envs[2]; // just pick one
     // modify the render state

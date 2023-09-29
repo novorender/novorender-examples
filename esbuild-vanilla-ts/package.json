@@ -15,6 +15,6 @@
     "esbuild": "^0.19.3"
   },
   "dependencies": {
-    "@novorender/api": "^0.0.23"
+    "@novorender/api": "^0.0.26"
   }
 }

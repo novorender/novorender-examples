@@ -21,6 +21,6 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "@novorender/api": "^0.0.21"
+    "@novorender/api": "^0.0.26"
   }
 }
