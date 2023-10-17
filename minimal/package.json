@@ -16,6 +16,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@novorender/api": "^0.0.26"
+    "@novorender/api": "^0.0.29"
   }
 }

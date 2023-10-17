@@ -10,7 +10,7 @@
     "postinstall": "node copy.mjs"
   },
   "dependencies": {
-    "@novorender/api": "^0.0.26",
+    "@novorender/api": "^0.0.29",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

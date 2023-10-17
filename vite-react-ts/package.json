@@ -13,7 +13,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@novorender/api": "^0.0.26"
+    "@novorender/api": "^0.0.29"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
