@@ -1,6 +1,6 @@
-# Using @novorender/api with Vite [vanilla-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-vanilla-ts) template
+# Using Novorender OAuth 2.0 with PKCE
 
-A tutorial can be found for this project [here](https://docs.novorender.com/docs/tutorial/vite_getting_started).
+this project is linked to the [following](https://docs.novorender.com/docs/guide/using_oauth) guide.
 
 1. Clone the repository:
 
@@ -11,7 +11,7 @@ A tutorial can be found for this project [here](https://docs.novorender.com/docs
 2. Navigate into the project directory:
 
     ```bash
-        cd vite-vanilla-ts
+        cd oauth
     ```
 
 3. Install project dependencies:
