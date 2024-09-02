@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="canvas" style="width:100%; height:60vh"></canvas>
+      <div>
+        <button id="btnFullDownload">Full Download</button>
+        <button id="btnIncrementalDownload">Incremental Download</button>
+        <button id="btnDelete">Delete Downloaded Scene</button>
+      </div>
+      <div>
+        <p id="progressInfo">Progress: <span>N/A</span></p>
+        <p id="progressInfo">Scan progress: <span>N/A</span></p>
+        <p id="sceneInfo">Scene: <span>N/A</span></p>
+        <p id="sizeInfo">Size: <span>N/A</span></p>
+        <p id="statusInfo">Status: <span>N/A</span></p>
+        <p id="lastSyncInfo">Last synchronized: <span>N/A</span></p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
