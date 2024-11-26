@@ -1,6 +1,6 @@
 # Using Novorender OAuth 2.0 with PKCE
 
-this project is linked to the [following](https://docs.novorender.com/docs/guide/using_oauth) guide.
+this project is linked to the [following](https://docs.novorender.com/docs/guides/using_oauth) guide.
 
 1. Clone the repository:
 
