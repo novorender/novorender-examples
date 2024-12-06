@@ -11,7 +11,7 @@ const btnDelete = document.getElementById("btnDelete") as HTMLButtonElement;
 
 const gpuTier = 2;  // Assumed GPU tier for a reasonably new/powerful GPU.
 const deviceProfile = getDeviceProfile(gpuTier);
-const baseUrl = new URL("/novorender/api/", window.location.origin); // or whereever you copied the public/ files from the package.
+const baseUrl = new URL("/novorender/api/", window.location.origin); // or wherever you copied the public/ files from the package.
 const serviceUrl = "https://data.novorender.com/api";
 const sceneId = "95a89d20dd084d9486e383e131242c4c"; // Default Condos scene ID, which is public.
 
