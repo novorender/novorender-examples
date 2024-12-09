@@ -10,10 +10,10 @@
     "postinstall": "node copy.js"
   },
   "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.5.5"
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
   },
   "dependencies": {
-    "@novorender/api": "^0.0.29"
+    "@novorender/api": "^0.5.17"
   }
 }

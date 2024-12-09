@@ -1,4 +1,9 @@
-import { View, getDeviceProfile, createSphereObject } from "@novorender/api";
+import {
+    createSphereObject,
+    getDeviceProfile,
+    type RenderStateChanges,
+    View,
+} from "@novorender/api";
 
 // get canvas reference
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
@@ -14,8 +19,10 @@ async function main(canvas: HTMLCanvasElement) {
     // Create a View
     const view = new View(canvas, deviceProfile, imports);
     // load a predefined environment to set it as background
-    const envIndexUrl = new URL("https://api.novorender.com/assets/env/index.json");
-    const envs = await view.availableEnvironments(envIndexUrl);
+    const envIndexUrl = new URL(
+        "https://api.novorender.com/assets/env/index.json",
+    );
+    const envs = await View.availableEnvironments(envIndexUrl);
     const { url } = envs[2]; // just pick one
     // modify the render state
     view.modifyRenderState({
@@ -24,10 +31,10 @@ async function main(canvas: HTMLCanvasElement) {
         dynamic: {
             objects: [{
                 mesh, // add a metallic sphere
-                instances: [{ position: [0, 0, 0], scale: 3 }]
-            }]
-        }
-    });
+                instances: [{ position: [0, 0, 0], scale: 3 }],
+            }],
+        },
+    } as RenderStateChanges);
     // run the view
     await view.run();
     // dispose-off GPU resources

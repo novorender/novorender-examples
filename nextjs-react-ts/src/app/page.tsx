@@ -1,18 +1,16 @@
+"use client";
 
-'use client'
-
-import { useEffect, useRef } from 'react'
-import { View, getDeviceProfile, createSphereObject } from "@novorender/api";
+import { useEffect, useRef } from "react";
+import { createSphereObject, getDeviceProfile, View } from "@novorender/api";
 
 const { mesh } = createSphereObject();
 
 export default function Home() {
-
   const canvas = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     main(canvas.current);
-  }, [])
+  }, []);
 
   // Create a simple sphere mesh object.
 
@@ -21,12 +19,14 @@ export default function Home() {
     // Get Device Profile
     const deviceProfile = getDeviceProfile(gpuTier);
     const baseUrl = new URL("/novorender/api/", location.origin);
-    const imports = await View.downloadImports({ baseUrl }); // or whereever you copied the public/ files from the package.
+    const imports = await View.downloadImports({ baseUrl }); // or wherever you copied the public/ files from the package.
     // Create a View
     const view = new View(canvas as HTMLCanvasElement, deviceProfile, imports);
     // load a predefined environment to set it as background
-    const envIndexUrl = new URL("https://api.novorender.com/assets/env/index.json");
-    const envs = await view.availableEnvironments(envIndexUrl);
+    const envIndexUrl = new URL(
+      "https://api.novorender.com/assets/env/index.json",
+    );
+    const envs = await View.availableEnvironments(envIndexUrl);
     const { url } = envs[2]; // just pick one
     // modify the render state
     view.modifyRenderState({
@@ -35,9 +35,9 @@ export default function Home() {
       dynamic: {
         objects: [{
           mesh, // add a metallic sphere
-          instances: [{ position: [0, 0, 0], scale: 3 }]
-        }]
-      }
+          instances: [{ position: [0, 0, 0], scale: 3 }],
+        }],
+      },
     });
     // run the view
     await view.run();
@@ -47,7 +47,11 @@ export default function Home() {
 
   return (
     <main>
-      <canvas ref={canvas} style={{ width: '100%', height: '100%', background: 'grey' }}></canvas>
+      <canvas
+        ref={canvas}
+        style={{ width: "100%", height: "100%", background: "grey" }}
+      >
+      </canvas>
     </main>
-  )
+  );
 }
