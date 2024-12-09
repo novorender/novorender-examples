@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.19.3"
+    "esbuild": "^0.24.0"
   },
   "dependencies": {
-    "@novorender/api": "^0.0.29"
+    "@novorender/api": "^0.5.17"
   }
 }

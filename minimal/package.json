@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.2.2"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@novorender/api": "^0.0.29"
+    "@novorender/api": "^0.5.17"
   }
 }
