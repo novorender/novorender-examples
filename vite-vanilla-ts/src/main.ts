@@ -1,4 +1,9 @@
-import { createSphereObject, getDeviceProfile, View } from "@novorender/api";
+import {
+    createSphereObject,
+    getDeviceProfile,
+    type RenderStateChanges,
+    View,
+} from "@novorender/api";
 
 // get canvas reference
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
@@ -29,7 +34,7 @@ async function main(canvas: HTMLCanvasElement) {
                 instances: [{ position: [0, 0, 0], scale: 3 }],
             }],
         },
-    });
+    } as RenderStateChanges);
     // run the view
     await view.run();
     // dispose-off GPU resources
