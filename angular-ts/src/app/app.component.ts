@@ -28,7 +28,7 @@ export class AppComponent {
     const view = new View(canvas, deviceProfile, imports);
     // load a predefined environment to set it as background
     const envIndexUrl = new URL(
-      "https://api.novorender.com/assets/env/index.json",
+      "https://assets.novorender.com/env/index.json",
     );
     const envs = await View.availableEnvironments(envIndexUrl);
     const { url } = envs[2]; // just pick one
