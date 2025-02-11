@@ -1,10 +1,10 @@
 # Using @novorender/api with [Next.js](https://nextjs.org/)
 
-### Prerequisite  
+## Prerequisite  
 **Always use the latest version of Node.js.**  
 You can check your current Node.js version by running:  
 
-```sh
+```bash
 node -v
 ```
 

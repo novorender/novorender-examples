@@ -1,5 +1,13 @@
 # Using @novorender/api with Webpack and TypeScript
 
+## Prerequisite  
+**Always use the latest version of Node.js.**  
+You can check your current Node.js version by running:  
+
+```bash
+node -v
+```
+
 A tutorial can be found for this project [here](https://docs.novorender.com/docs/tutorial/webpack_getting_started).
 
 1. Clone the repository:
