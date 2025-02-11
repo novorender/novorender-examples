@@ -1,5 +1,13 @@
 # Using @novorender/api with Vite [vanilla-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-vanilla-ts) template
 
+## Prerequisite  
+**Always use the latest version of Node.js.**  
+You can check your current Node.js version by running:  
+
+```bash
+node -v
+```
+
 A tutorial can be found for this project [here](https://docs.novorender.com/docs/tutorial/vite_getting_started).
 
 1. Clone the repository:

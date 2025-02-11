@@ -1,5 +1,13 @@
 # Using @novorender/api with [Next.js](https://nextjs.org/)
 
+## Prerequisite  
+**Always use the latest version of Node.js.**  
+You can check your current Node.js version by running:  
+
+```bash
+node -v
+```
+
 1. Clone the repository:
 
     ```bash

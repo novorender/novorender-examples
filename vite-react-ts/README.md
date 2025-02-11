@@ -1,5 +1,13 @@
 # Using @novorender/api with Vite [react-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) template
 
+## Prerequisite  
+**Always use the latest version of Node.js.**  
+You can check your current Node.js version by running:  
+
+```bash
+node -v
+```
+
 1. Clone the repository:
 
     ```bash
